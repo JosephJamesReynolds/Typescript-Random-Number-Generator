@@ -6,7 +6,7 @@ interface Props {
 
 const Login: React.FC<Props> = ({ connectWallet }) => {
   return (
-    <div>
+    <div className="login-container">
       <h1>Welcome to Sepolia Testnet: Random Number Generator</h1>
       <button onClick={connectWallet}>Login Metamask</button>
     </div>
