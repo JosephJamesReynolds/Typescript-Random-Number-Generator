@@ -1,5 +1,5 @@
 {
-  "name": "random-number-generator",
+  "name": "smart_contract",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,10 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "hardhat": "^2.22.7"
+    "@nomicfoundation/hardhat-toolbox": "^2.0.0",
+    "@types/node": "^18.7.18",
+    "hardhat": "^2.11.2"
   },
   "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.0.2"
   }
 }
