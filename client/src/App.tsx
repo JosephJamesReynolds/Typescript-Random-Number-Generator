@@ -52,7 +52,7 @@ function App() {
       {currentAccount ? (
         <>
           <div className="navbar">
-            <p>my wallet address: {currentAccount}</p>
+            <p>My Wallet Address: {currentAccount}</p>
           </div>
           <div className="header">
             <div className="container">

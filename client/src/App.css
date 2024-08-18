@@ -1,38 +1,126 @@
+:root {
+  --primary-color: #344feb;
+  --background-color: #f0f2f5;
+  --text-color: #333;
+  --transition-speed: 0.3s;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar {
-  background-color: #344feb;
+  background-color: var(--primary-color);
   padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar p {
   color: #fff;
+  margin: 0;
+  font-size: 0.9rem;
 }
 
 .header {
-  height: 90vh;
+  flex-grow: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
 }
 
-.header button {
-  background-color: #344feb;
+.container {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition-speed);
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+button {
+  background-color: var(--primary-color);
   border: none;
-  padding: 1rem;
+  padding: 1rem 2rem;
   color: #fff;
   font-size: 1rem;
   font-weight: bold;
-  border-radius: 0.5rem;
+  border-radius: 2rem;
   margin-top: 2rem;
+  cursor: pointer;
+  transition: all var(--transition-speed);
 }
 
-.header button:hover {
+button:hover {
   background-color: transparent;
-  color: #344feb;
-  outline: 2px solid #344feb;
+  color: var(--primary-color);
+  box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  button {
+    padding: 0.8rem 1.6rem;
+    font-size: 0.9rem;
+  }
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--background-color);
+}
+
+.login-container h1 {
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.login-container button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 2rem;
   cursor: pointer;
+  transition: all var(--transition-speed);
+}
+
+.login-container button:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+  box-shadow: 0 0 0 2px var(--primary-color);
 }
