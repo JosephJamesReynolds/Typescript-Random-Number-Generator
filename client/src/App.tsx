@@ -57,7 +57,9 @@ function App() {
           <div className="header">
             <div className="container">
               {isLoading ? (
-                <PropagateLoader color="#000" size={30} />
+                <div className="loader-wrapper">
+                  <PropagateLoader color="#000" size={30} />
+                </div>
               ) : (
                 <h1>{randomNumber}</h1>
               )}

@@ -6,11 +6,19 @@
 }
 
 body {
-  font-family: "Arial", sans-serif;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background-color: var(--background-color);
   color: var(--text-color);
-  margin: 0;
-  padding: 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 .App {
@@ -46,16 +54,32 @@ body {
   padding: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform var(--transition-speed);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  width: 100%;
+  max-width: 400px;
 }
 
 .container:hover {
   transform: translateY(-5px);
 }
 
+.loader-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
 h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
   color: var(--primary-color);
+  text-align: center;
 }
 
 button {
@@ -75,22 +99,6 @@ button:hover {
   background-color: transparent;
   color: var(--primary-color);
   box-shadow: 0 0 0 2px var(--primary-color);
-}
-
-@media (max-width: 768px) {
-  .container {
-    width: 90%;
-    padding: 1rem;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  button {
-    padding: 0.8rem 1.6rem;
-    font-size: 0.9rem;
-  }
 }
 
 .login-container {
@@ -123,4 +131,20 @@ button:hover {
   background-color: transparent;
   color: var(--primary-color);
   box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  button {
+    padding: 0.8rem 1.6rem;
+    font-size: 0.9rem;
+  }
 }
